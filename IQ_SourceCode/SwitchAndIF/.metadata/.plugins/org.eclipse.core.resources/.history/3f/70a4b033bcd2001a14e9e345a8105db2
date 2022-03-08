@@ -1,0 +1,16 @@
+
+public class ClsRun 
+{
+ 
+	
+	public static void main(String[] args) 
+	{
+		
+		displayString("sss");
+	}
+	
+	private void displayString(String str)
+	{
+		System.out.println(str);
+	}
+}

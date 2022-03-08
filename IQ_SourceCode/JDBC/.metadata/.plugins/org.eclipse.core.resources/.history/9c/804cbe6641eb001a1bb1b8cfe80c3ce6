@@ -1,0 +1,18 @@
+
+public class A {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = new String ("Soumen");
+		String s1 = "Soumen";
+		if(s==s1){
+			
+		}else{
+			
+		}
+	}
+
+}

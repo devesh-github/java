@@ -1,0 +1,14 @@
+
+public class clsRun {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+	clsMaths objclsMaths = new clsMaths();
+	objclsMaths.MakeMyCircle(12);
+
+	}
+
+}

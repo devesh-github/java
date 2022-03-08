@@ -1,0 +1,27 @@
+package MyNumbers;
+import javax.servlet.http.*;
+import org.apache.struts.action.*;
+ 
+public final class InputNumbersAction 
+			extends Action  
+{
+	  public ActionForward execute(ActionMapping mapping,
+		      ActionForm form,
+		      HttpServletRequest request,
+		      HttpServletResponse response) 
+	    throws Exception
+	  {
+
+		  	InputNumbersForm f = (InputNumbersForm) form; 
+
+		    int intNumber = f.getintNumber();
+		    NumberToWords objnumbertoword = new NumberToWords();
+		    String strNumber = objnumbertoword.GetWords(intNumber);
+
+		    f.setstrNumber(strNumber);
+		    return (mapping.findForward("success"));
+		  }
+	  
+
+
+}

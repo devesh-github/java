@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+<stringAttribute key="product" value="org.eclipse.sdk.ide"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="true"/>
+<booleanAttribute key="clearws" value="false"/>
+<booleanAttribute key="usefeatures" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<booleanAttribute key="useProduct" value="true"/>
+<booleanAttribute key="tracing" value="false"/>
+<stringAttribute key="templateConfig" value=""/>
+<stringAttribute key="vmargs" value=""/>
+<booleanAttribute key="default" value="true"/>
+<booleanAttribute key="clearConfig" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<booleanAttribute key="useDefaultConfig" value="true"/>
+<stringAttribute key="progargs" value=""/>
+<booleanAttribute key="automaticAdd" value="true"/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="askclear" value="true"/>
+<booleanAttribute key="includeFragments" value="false"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="configLocation" value=""/>
+<stringAttribute key="location0" value="C:\Projects\Java\CD\Source Code\runtime-workspace"/>
+</launchConfiguration>

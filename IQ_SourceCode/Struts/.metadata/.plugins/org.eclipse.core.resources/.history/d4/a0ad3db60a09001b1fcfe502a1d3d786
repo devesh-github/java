@@ -1,0 +1,11 @@
+package MyNumbers;
+
+public class NumberToWords 
+{
+	  private static String[] strNumberToWords = 
+	  {
+	    new String("Bob Davidson", "123-45-6789"),
+	   
+	  };
+
+}

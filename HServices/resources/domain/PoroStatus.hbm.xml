@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping>
+		<class name="au.gov.doha.pcehr.security.domain.PoroStatus" table="PORO_STATUS">
+			<id name ="interactionId" column="INTERACTION_ID" type="java.lang.String"/>
+			<property name="idType" type="java.lang.String" column="ID_TYPE"/>
+			<property name="idNumber" column="ID_NUMBER" type="java.lang.String"/>
+			<property name="neafLevel" column="NEAF_LEVEL" type="java.lang.String"/>
+			<property name="interactionIdExpiryDate" column="INTERACTION_ID_EXPIRY_DATE" type="java.util.Date"/>
+		</class>
+		<query name="getPoroForInteractionId"><![CDATA[from PoroStatus where interactionId=:interactionId]]></query>
+	</hibernate-mapping>

@@ -1,0 +1,9 @@
+!SESSION 2006-05-01 14:41:35.250 -----------------------------------------------
+eclipse.buildId=M20060118-1600
+java.version=1.4.2_10
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2006-05-01 14:41:41.484
+!MESSAGE A workspace crash was detected. The previous session did not exit normally.

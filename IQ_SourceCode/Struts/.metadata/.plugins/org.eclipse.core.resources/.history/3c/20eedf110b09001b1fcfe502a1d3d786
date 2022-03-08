@@ -1,0 +1,10 @@
+package MyNumbers;
+import java.util.ArrayList;
+public class NumberToWords 
+{
+	ArrayList resultList = new ArrayList();
+	void NumberToWords()
+	{
+		resultList.add(1,new String("One"));
+	}
+}

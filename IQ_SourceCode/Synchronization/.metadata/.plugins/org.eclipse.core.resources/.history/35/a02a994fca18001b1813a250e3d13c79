@@ -1,0 +1,15 @@
+import java.lang.*;;
+class clsSynchronized
+{
+    double intCount;
+
+    synchronized void thelma()
+    {   
+    	x = 0;
+    }
+
+    public void louise()    
+    {        x = -1;        
+    }                       
+}
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<project name="MyWebService" default="war" basedir=".">
+	
+	<property file="${basedir}/wsbuild.properties"/>
+
+	<path id="compile.MyWebService">
+		<fileset dir="${code.base}/WebContent/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="${code.base}/build/classes"/>
+		<mkdir dir="build/classes"/>
+		<mkdir dir="${deploy}"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac destdir="${code.base}/build/classes" debug="true" srcdir="${basedir}/src" compiler="javac1.6">
+			<classpath refid="compile.MyWebService"/>
+		</javac>
+	</target>
+	
+	<target name="war" depends="clean,compile">
+		<war destfile="${war.file}">
+			<webinf file="webcontent/web.xml"/>
+			<webinf file="webcontent/weblogic.xml"/>	
+			<webinf file="webcontent/ReadMe.txt"/>
+			<webinf file="${basedir}/wsdl" includes="wsdl/*.*"/>
+			<lib file="${code.base}/WebContent/WEB-INF/lib/log4j-1.2.8.jar"/>
+			<lib file="${code.base}/WebContent/WEB-INF/lib/j2ee-1.4.jar"/>
+			<classes dir="build/classes"/>
+		</war>
+	</target>
+	
+	<target name="clean">
+		<delete dir="dist" />
+		<delete dir="${code.base}/build" />
+		<delete dir="build/classes" />
+		<delete dir="${deploy}" />
+	</target>
+</project>

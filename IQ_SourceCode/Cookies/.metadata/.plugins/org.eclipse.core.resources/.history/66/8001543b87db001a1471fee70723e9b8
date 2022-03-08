@@ -1,0 +1,39 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+ 
+public class clsCookies
+ extends HttpServlet
+ implements Servlet
+{
+ public void doGet(
+  HttpServletRequest request,
+  HttpServletResponse response)
+  throws ServletException, IOException
+ {
+  // get the cookies value in string variable
+  String strfavoritebook =  request.getParameter("BooksPreference");
+  
+  Cookie favoritecookiebook =  new Cookie("favoritecookiebook", strfavoritebook);
+  favoritecookiebook.setComment("Houses User's Favorite Cookie Type");
+  // add the cookie to the response
+  response.addCookie(favoritecookiebook);
+  // provide some visual feedback to the user
+  PrintWriter out =  response.getWriter();
+  out.println(" "+ "");
+  out.println("<H2>I am now going to remember that you like "    + favoritecookiebook    + " cookies, using Cookies.</H2>");
+  out.println("");
+ }
+ public void doPost(
+  HttpServletRequest request,
+  HttpServletResponse response)
+  throws ServletException, IOException
+ {
+  doGet(request, response);
+ }
+}

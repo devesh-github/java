@@ -1,0 +1,13 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping>
+		<!-- <query name="getPcehrRecForRecIdandNomName"><![CDATA[from RepresentativeRecordAcode RRA INNER JOIN PcehrRecord PR where RRA.recordId=:recordId AND UPPER(RRA.nomineeName)=:UPPER(nomineeName)]]></query> -->
+		<!-- <query name="getPcehrRecDetails"><![CDATA[from PcehrRecord PR,Demographic DEM where PR.ihi=:DEM.ihi and PR.recordId=:recordId]]></query> -->
+		 <!-- <query name="getPcehrRecDetails"><![CDATA[from PcehrRecord where PcehrRecord.recordId=:recordId]]></query> -->
+		<!--<query name="getPcehrRecordList"><![CDATA[from IdentityRecordRelationship IRR INNER JOIN Demographic D ON D.ihi = IRR.pcehrRecord.ihi WHERE IRR.pcehrIdentity.userId=:userId AND (IRR.relationshipEndDate IS NULL OR IRR.relationshipEndDate>SYSDATE) AND PRR.relationshipStatus.relStatusId=:relStatusId]]></query>-->
+		<query name="getPcehrRecordList"><![CDATA[from IdentityRecordRelationship IRR WHERE IRR.pcehrIdentity.userId=:userId AND (IRR.relationshipEndDate IS NULL OR IRR.relationshipEndDate>SYSDATE) AND IRR.relationshipStatus.relationshipStatusId=:relStatusId]]></query>
+		<query name="getPCEHRRecordDetails"><![CDATA[from PcehrRecord PR LEFT OUTER JOIN PR.demographic where PR.recordId=:recordId]]></query>
+		<query name="getPCEHRRecordDetailsForSearch"><![CDATA[from PcehrRecord PR LEFT OUTER JOIN PR.demographic where PR.recordId=:recordId AND PR.demographic.familyName=:familyName AND PR.demographic.sex=:sex AND PR.demographic.dob=:dob]]></query>
+		<!-- <query name="updatePCEHRRecordDetails"><![CDATA[UPDATE PcehrRecord SET pacc = null, paccx = null, recordLastUpdateDate = SYSDATE WHERE recordId =:recordId]]></query> -->
+	</hibernate-mapping>

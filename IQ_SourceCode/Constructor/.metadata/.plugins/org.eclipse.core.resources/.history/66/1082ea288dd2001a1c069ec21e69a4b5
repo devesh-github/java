@@ -1,0 +1,16 @@
+class clsMaths {
+  double PI;
+
+   
+  // This is the constructor for the maths constant class.
+  clsMaths() 
+  {
+  PI = 3.14;
+  }
+   
+ 
+  void MakeMyCircle(int intRadius) 
+  {
+    return PI * intRadius * intRadius;
+  }
+}

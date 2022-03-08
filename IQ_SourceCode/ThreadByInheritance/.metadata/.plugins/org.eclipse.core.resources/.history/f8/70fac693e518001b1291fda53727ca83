@@ -1,0 +1,10 @@
+
+public class clsThread extends Thread 
+{
+public String x;
+public void run()
+{
+	
+}
+
+}

@@ -1,0 +1,40 @@
+import java.sql.*;
+ 
+public class clsDatabase 
+{
+  public static void main(String args[]) 
+{
+    String url = "jdbc:postgresql://localhost:5432/interview";
+     
+    try 
+    {
+    	
+      Class.forName("org.postgresql.Driver");
+      
+    }
+    catch( Exception e ) 
+    {
+      System.out.println("Failed to load mSQL driver.");
+      return;
+    }
+    try {
+      Connection con = DriverManager.getConnection(url, "postgres", "pass@1234!@#$");
+      Statement select = con.createStatement();
+      ResultSet result = select.executeQuery("Select * from users");         
+      
+      while(result.next()) 
+      { 
+        String key = result.getString(1);
+      }
+      
+      select.close();
+      con.close();
+    }
+    catch( Exception e ) 
+    {
+      e.printStackTrace();
+    }
+  }
+}
+
+

@@ -1,0 +1,11 @@
+public interface HelloHome extends javax.ejb.EJBHome
+{ 
+    
+    /*
+     * This method creates the EJB Object.
+     *
+     * @return The newly created EJB Object.
+     */
+    HelloInterFace create() throws java.rmi.RemoteException,
+        javax.ejb.CreateException;
+} 

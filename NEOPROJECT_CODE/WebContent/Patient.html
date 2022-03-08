@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Patient Details</title>
+<style type="text/css">
+body {
+	background-image: url(img/background_1.jpg);
+}
+#form1 div p #text_hospital_reg_code {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #F00;
+}
+#form1 div p #text_hospital_reg_code {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: xx-large;
+	color: #F00;
+	text-decoration: blink;
+	border: thin none #FFF;
+}
+#form1 div p #text_patient_admin_date {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_phone_number {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_firstname {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_last_name {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #select_patient_gender {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_dob {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_height {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_weight {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_email {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #select_patient_neonatial_unit {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #patient_mode_of_delivery {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #select_patient_crestation {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #select_patient_indication_fr_admission {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #select_patient_complication {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #select_mode_of_treatment {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_treament {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_medication {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #select_patient_transfusion {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #select_patient_muternal {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_addline_1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_addline_2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_addline_3 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_city_zipcode {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_state {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #text_patient_country {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 div p #button_patient_save {
+	font-weight: bold;
+}
+#form1 div p #button_patient_reset {
+	font-weight: bold;
+}
+#form1 div p #button_patient_next {
+	font-weight: bold;
+}
+#form1 div p #button_patient_cancel {
+	font-weight: bold;
+}
+#form1 div p #text_hospital_reg_code {
+	color: #F00;
+	background-color: #FFF;
+}
+#form1 div p #text_hospital_reg_code {
+	color: #F00;
+	border-top-style: outset;
+	border-right-style: inset;
+	border-bottom-style: inset;
+	border-left-style: outset;
+}
+#form1 div p a {
+	font-size: 24px;
+	color: #C06;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	var p=document.form1.textfield3.value;
+	if(isNaN(p)||p.indexOf()!=-1)
+	{
+		alert("Please provide numeric number!");
+		document.form1.textfield3.focus() ;
+	    return false;
+	}
+	if( document.form1.textfield4.value == "" )
+	   {
+	     alert( "Please provide your First Name!" );
+	     document.form1.textfield4.focus() ;
+	     return false;
+	   }	
+	if( document.form1.select_patient_gender.value == "" )
+	   {
+	     alert( "Please provide your Gender!" );
+	     document.form1.select_patient_gender.focus() ;
+	     return false;
+	   }	
+	if( document.form1.text_patient_addline1.value == "" )
+	   {
+	     alert( "Please provide your Address!" );
+	     document.form1.text_patient_addline1.focus() ;
+	     return false;
+	   }
+	if( document.form1.textfield10 == "" ||
+	           isNaN( document.form1.textfield10.value ) ||
+	           document.form1.textfield10.value.length != 6 )
+	   {
+	     alert( "Please provide a zip in the format ######." );
+	     document.form1.textfield10.focus() ;
+	     return false;
+	   }		
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="PatientServlet" onsubmit="return(validate())">
+  <div align="center">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/LOGO.jpg" width="651" height="45" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/LOGG.png" width="56" height="56" /></p>
+    <p align="right">
+      <input name="textfield" type="text" id="text_hospital_reg_code" value="Hospital Name" size="43" maxlength="45" readonly="readonly" />
+    </p>
+    <p align="left">&nbsp;&nbsp;
+      <input name="textfield2" type="text" id="text_patient_admin_date" value="Today Date" size="17" maxlength="10" />
+      &nbsp;&nbsp;&nbsp;<img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+      <input name="textfield3" type="text" id="text_patient_phone_number" value="Phone#" size="18" maxlength="10" />
+    <img src="img/search.jpg" width="19" height="19" /></p>
+    <p align="left"><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+      <input name="textfield4" type="text" id="text_patient_firstname" value="Patient First Name" size="50" maxlength="45" />
+    <img src="img/search.jpg" width="19" height="19" /></p>
+    <p align="left">&nbsp;&nbsp;
+      <input name="textfield5" type="text" id="text_patient_last_name" value="Patient Last Name" size="50" maxlength="45" />
+    </p>
+    <p align="left"><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+      <label for="select_patient_gender"></label>
+      <select name="select_patient_gender" id="select_patient_gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    &nbsp;&nbsp;&nbsp;<img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="textfield6" type="text" id="text_patient_dob" value="DOB" size="11" maxlength="10" />
+    &nbsp;&nbsp;&nbsp;
+<input name="textfield7" type="text" id="text_patient_height" value="Height" size="11" maxlength="8" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="text_patient_weight"></label>
+    <input name="text_patient_weight" type="text" id="text_patient_weight" value="Weight" size="11" maxlength="8" />
+    </p>
+    <p align="left">
+      <label for="text_patient_email">&nbsp;&nbsp;</label>
+      <input name="text_patient_email" type="text" id="text_patient_email" value="Email" size="50" maxlength="45" />
+    </p>
+    <p align="left">
+      <label for="select_patient_neonatial_unit">&nbsp;&nbsp;</label>
+      <select name="select_patient_neonatial_unit" id="select_patient_neonatial_unit">
+        <option>Neonatial Unit Level</option>
+        <option>N_Unit_Level_1</option>
+        <option>N_Unit_Level_2</option>
+        <option>N_Unit_Level_3</option>
+        <option>N_Unit_Level_4</option>
+        <option>N_Unit_Level_5</option>
+      </select>
+     &nbsp;&nbsp; <label for="patient_mode_of_delivery"></label>
+      <select name="patient_mode_of_delivery" id="patient_mode_of_delivery">
+        <option>patient_mode_of_delivery</option>
+        <option>P_M_O_D_1</option>
+        <option>P_M_O_D_2</option>
+        <option>P_M_O_D_3</option>
+        <option>P_M_O_D_4</option>
+        <option>P_M_O_D_5</option>
+      </select>&nbsp;&nbsp;&nbsp;
+      <label for="select_patient_crestation"></label>
+      <select name="select_patient_crestation" id="select_patient_crestation">
+        <option>Crestation</option>
+        <option>Crest_1</option>
+        <option>Crest_2</option>
+        <option>Crest_3</option>
+        <option>Crest_4</option>
+        <option>Crest_5</option>
+      </select>
+    </p>
+    <p align="left">
+      <label for="select_patient_indication_fr_admission">&nbsp;&nbsp;</label>
+      <select name="select_patient_indication_fr_admission" id="select_patient_indication_fr_admission">
+        <option>Indication for Admission</option>
+        <option>I_F_A_1</option>
+        <option>I_F_A_2</option>
+        <option>I_F_A_3</option>
+        <option>I_F_A_4</option>
+        <option>I_F_A_5</option>
+      </select>&nbsp;&nbsp;&nbsp;
+      <label for="select_patient_complication"></label>
+      <select name="select_patient_complication" id="select_patient_complication">
+        <option>Complication</option>
+        <option>Complication_1</option>
+        <option>Complication_2</option>
+        <option>Complication_3</option>
+        <option>Complication_4</option>
+        <option>Complication_5</option>
+      </select>
+    </p>
+    <p align="left">&nbsp;&nbsp;
+      <select name="select" id="select_mode_of_treatment">
+        <option>Mode Of Treatment</option>
+        <option>M_T_1</option>
+        <option>M_T_1</option>
+        <option>M_T_1</option>
+        <option>M_T_1</option>
+      </select>&nbsp;&nbsp;&nbsp;
+      <label for="text_patient_treament"></label>
+      <input name="textfield8" type="text" id="text_patient_treament" value="Treatment" size="30" maxlength="45" />
+    </p>
+    <p align="left">
+      <label for="text_patient_medication"></label>
+      &nbsp;&nbsp;&nbsp;<input name="text_patient_medication" type="text" id="text_patient_medication" value="Medication" size="50" maxlength="45" />
+    </p>
+    <p align="left">&nbsp;&nbsp;
+      <select name="select2" id="select_patient_transfusion">
+        <option>Transfusion</option>
+        <option>Transfusion_1</option>
+        <option>Transfusion_2</option>
+        <option>Transfusion_3</option>
+        <option>Transfusion_4</option>
+        <option>Transfusion_5</option>
+      </select>&nbsp;&nbsp;&nbsp;
+      <select name="select3" id="select_patient_muternal">
+        <option>Muternal</option>
+        <option>Muternal_1</option>
+        <option>Muternal_2</option>
+        <option>Muternal_3</option>
+        <option>Muternal_4</option>
+        <option>Muternal_5</option>
+      </select>
+    </p>
+    <p align="left"><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+      <label for="text_patient_addline1"></label>
+      <input name="text_patient_addline1" type="text" id="text_patient_addline_1" value="Address Line 1" size="50" maxlength="45" />
+    </p>
+    <p align="left">
+      <label for="text_patient_addline_2">&nbsp;&nbsp;</label>
+      <input name="text_patient_addline_2" type="text" id="text_patient_addline_2" value="Address Line 2" size="50" maxlength="45" />
+    </p>
+    <p align="left">&nbsp;&nbsp;
+      <input name="textfield9" type="text" id="text_patient_addline_3" value="Address Line 3" size="50" maxlength="45" />
+    &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <label for="textfield"></label>
+    <input name="textfield10" type="text" id="text_patient_city_zipcode" value="Zipcode" size="16" maxlength="6" />
+    </p>
+    
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="submit" name="button" id="button_patient_save" value="Save" />
+      <input type="submit" name="button_patient_reset" id="button_patient_reset" value="Submit" />
+      <input type="submit" name="button2" id="button_patient_next" value="Next" />
+      <input type="submit" name="button_patient_cancel" id="button_patient_cancel" value="Cancel" />
+    </p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/BACK.png" width="124" height="69" /></p>
+    <p align="left">
+      <label for="text_patient_state">&nbsp;&nbsp;</label>
+      <input name="text_patient_state" type="text" id="text_patient_state" value="Karnataka" size="50" maxlength="45" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="text_patient_country"></label>
+      <input name="text_patient_country" type="text" id="text_patient_country" value="India" size="20" maxlength="45" />
+    </p><p align="left">&nbsp;</p>
+  </div>
+</form>
+</body>
+</html>

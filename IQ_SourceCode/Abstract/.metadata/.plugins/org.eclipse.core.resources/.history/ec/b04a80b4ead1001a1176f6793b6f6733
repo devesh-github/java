@@ -1,0 +1,19 @@
+
+public class clsRun 
+{
+	public static void main(String[] args) 
+	{
+		clsMale objclsMale = new clsMale();
+		clsFemale objclsFemale = new clsFemale();
+		
+		System.out.println(" Male has " + objclsMale.numberOfEyes());
+		objclsMale.numberOfLegs();
+		objclsMale.Sex();
+		
+		objclsFemale.numberOfEyes();
+		objclsFemale.numberOfLegs();
+		objclsFemale.Sex();
+	
+	}
+
+}

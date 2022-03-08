@@ -1,0 +1,45 @@
+import java.util.*;
+public class clsComparator 
+implements Comparator 
+{
+public int compare(Object arg0, Object arg1) 
+{
+String str1,str2;
+str1 = (String)arg0;
+str2 = (String) arg1;
+if (str1.length() < str2.length())
+{
+	return 1;
+}
+if (str1.length() > str2.length())
+{
+	return -1;
+}
+else
+{
+	return 0;
+}
+}
+
+}
+public class clsMain 
+{
+	public static void main(String[] args) 
+	{
+		TreeSet ts = new TreeSet(new clsComparator());
+		
+		ts.add("ShivXXXX");
+		ts.add("ShivXXXXXXX");
+		ts.add("ShivXXXXX");
+		ts.add("ShivXXXXXX");
+		
+		Iterator i = ts.iterator();
+		while(i.hasNext())
+		{
+		Object el = i.next();
+		System.out.println(el +"");
+		}
+		}
+	}
+
+

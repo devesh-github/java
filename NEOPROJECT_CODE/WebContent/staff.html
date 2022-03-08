@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Staff Details</title>
+<style type="text/css">
+body {
+	background-image: url(img/background_1.jpg);
+	color: #000;
+}
+#form1 p #txt_first_name {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #txt_last_name {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #txt_dob {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #select_gender {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_staff_job_title {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #txt_addr_line1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_city {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_zipcode {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_country {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_doj {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #txt_first_name {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+#form1 p #select_gender {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_state {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#staff p #text_mobile {
+	background-color: #CCC;
+	border: thin none #CCC;
+}
+#staff p #button_save {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#staff p #button_save {
+	font-weight: bold;
+}
+#staff p #button_reset {
+	font-weight: bold;
+}
+#staff p #button_next {
+	font-weight: bold;
+}
+#staff p #button_cancel {
+	font-weight: bold;
+}
+#staff p #button_cancel {
+	font-weight: bold;
+}
+#staff p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#staff p #text_user_id {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#staff p #text_password {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	var p=document.staff.text_mobile.value;
+	if(isNaN(p)||p.indexOf()!=-1)
+	{
+		alert("Please provide numeric number!");
+		document.staff.text_mobile.focus() ;
+	    return false;
+	}
+	if(p.length<10)
+	{
+		alert("Please provide 10 digit mobile number!");
+		document.staff.text_mobile.focus() ;
+	    return false;
+	}
+	
+	if( document.staff.txt_first_name.value == "" )
+	   {
+	     alert( "Please provide First Name!" );
+	     document.staff.txt_first_name.focus() ;
+	     return false;
+	   }	
+	if( document.staff.text_staff_job_title.value == "" )
+	   {
+	     alert( "Please provide your Job Title!" );
+	     document.staff.text_staff_job_title.focus() ;
+	     return false;
+	   }
+	if( document.staff.txt_addr_line1.value == "" )
+	   {
+	     alert( "Please provide your Address!" );
+	     document.staff.txt_addr_line1.focus() ;
+	     return false;
+	   }
+	if( document.staff.txt_addr_line1.value == "" )
+	   {
+	     alert( "Please provide your Address!" );
+	     document.staff.txt_addr_line1.focus() ;
+	     return false;
+	   }		text_zipcode
+    if( document.staff.text_zipcode.value == "" ||
+           isNaN( document.staff.text_zipcode.value ) ||
+           document.staff.text_zipcode.value.length != 6 )
+	   {
+	     alert( "Please provide a zip in the format ######." );
+	     document.staff.text_zipcode.focus() ;
+	     return false;
+	   }
+}
+</script>
+</head>
+
+<body>
+<form id="staff" name="staff" method="post" action="StaffServlet" onsubmit="return(validate())">
+  <p align="center">
+    <label for="txt_first_name"></label>
+  <img src="img/LOGO.jpg" width="651" height="45" /></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p><img src="img/staff title.jpg" width="667" height="45" /></p>
+  <p><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <label for="text_mobile"></label>
+    <input name="text_mobile" type="text" id="text_staff_mobile" value="Mobile#" size="15" maxlength="10" />
+  <img src="img/search.jpg" width="19" height="19" />  </p>
+  <p><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="txt_first_name" type="text" id="text_staff_first_name" value="First Name" size="50" maxlength="45" />
+    <img src="img/search.jpg" alt="" width="19" height="19" />    &nbsp;&nbsp;<input name="txt_last_name" type="text" id="text_staff_last_name" value="Last Name" size="44" maxlength="45" />
+  </p>
+  <p><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="txt_dob" type="text" id="text_staff_dob" value="DOB" size="12" maxlength="10" />
+    <img src="img/search.jpg" alt="" width="19" height="19" />&nbsp;&nbsp;
+    <select name="select_gender" id="select_staff_gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>&nbsp;&nbsp;
+    <input name="text_staff_job_title" type="text" id="text_staff_job_title" value="Job Title" size="22" maxlength="45" />&nbsp;&nbsp;
+    <img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <label for="text_doj"></label>
+    <input name="text_doj" type="text" id="text_staff_doj" value="DOJ" size="12" maxlength="10" />
+  <img src="img/search.jpg" alt="" width="19" height="19" />  </p>
+  <p>
+    <label for="text_staff_phone">&nbsp;&nbsp;</label>
+    <input name="text_staff_phone" type="text" id="text_staff_phone" value="Phone Number" size="15" maxlength="10" />
+    &nbsp;&nbsp;&nbsp;<label for="text_phone_extension"></label>
+    <input name="text_phone_extension" type="text" id="text_staff_phone_extension" value="Phone Extension" size="20" maxlength="5" />
+    &nbsp;&nbsp;&nbsp;<label for="text_staff_email"></label>
+    <input name="text_staff_email" type="text" id="text_staff_email" value="Email" size="50" maxlength="45" />
+  </p>
+  <p>
+    <label for="txt_dob"></label>
+    <label for="text_staff_job_title">&nbsp;&nbsp;</label>
+    <input name="txt_addr_line1" type="text" id="text_staff_address_line_1" value="Address line 1" size="50" maxlength="45" />
+  </p>
+  <p>
+    <label for="select_gender">&nbsp;</label>
+    &nbsp;<input name="Address line 2" type="text" id="text_staff_address_line_2" value="Address line 2" size="50" maxlength="45" />
+  </p>
+  <p>
+    <label for="txt_addr_line1">&nbsp;</label>
+    &nbsp;<input name="Address line 3" type="text" id="text_staff_address_line_3" value="Address line 3" size="50" maxlength="45" />
+    <label for="text_state"></label>
+    <label for="text_address_from_date"></label>
+  </p>
+  <p>
+    <label for="text_city">&nbsp;</label>
+  &nbsp;<input name="text_city" type="text" id="text_staff_city" value="City" size="40" maxlength="45" />&nbsp;&nbsp;</p>
+  <p><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <label for="text_zipcode"></label>
+    <input name="text_zipcode" type="text" id="text_staff_zipcode" value="Zipcode" size="10" maxlength="7" />
+    <img src="img/search.jpg" alt="" width="19" height="19" />  </p>
+  <p>
+    <label for="text_country">&nbsp;</label>
+    &nbsp;<input name="text_state" type="text" id="text_staff_state" value="Karnataka" size="30" maxlength="45" />&nbsp;&nbsp;
+    <input name="text_country" type="text" id="text_staff_country" value="India" size="20" maxlength="45" />
+  </p>
+  <p>&nbsp;
+    
+      <input type="checkbox" name="CheckboxGroup1" value="Admin" id="CheckboxGroup1_0" />
+      Admin</label>
+    
+    <label>
+      &nbsp; <input type="checkbox" name="CheckboxGroup1" value="Super User" id="CheckboxGroup1_1" />
+      Super User</label>
+    
+    <label>
+      &nbsp; <input name="CheckboxGroup1" type="checkbox" id="CheckboxGroup1_2" value="User" checked="checked" />
+      User</label>
+  </p>
+  <p>
+    <label for="text_user_id"></label>
+    <img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="text_user_id" type="text" id="text_user_id" value="User ID" size="12" maxlength="8" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <label for="text_password"></label>
+    <input name="text_password" type="text" id="text_password" value="Password" size="12" maxlength="0" />
+    <br />
+  </p>
+<p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="submit" name="button" id="button_save" value="Save" />
+    <input type="submit" name="button_reset" id="button_reset" value="Reset" />
+    <input type="submit" name="button_next" id="button_next" value="Next" />
+    <input type="submit" name="button_cancel" id="button_cancel" value="Cancel" />
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/BACK.png" width="124" height="69" /></p>
+  <p>
+    <label for="Address line 2"></label>
+  </p>
+  <p>&nbsp;</p>
+  <P>&nbsp;</P>
+  <p>
+    <label for="Address line 3"></label>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</form>
+</body>
+</html>

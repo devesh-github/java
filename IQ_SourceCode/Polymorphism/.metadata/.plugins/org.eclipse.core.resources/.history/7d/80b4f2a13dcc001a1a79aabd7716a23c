@@ -1,0 +1,15 @@
+
+public class clsRun {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		
+		//System.out.println("Special addition :- " + objClsSpecialAdd.Add(2,3));
+		
+	}
+
+}

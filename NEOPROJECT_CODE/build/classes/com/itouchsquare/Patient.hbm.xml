@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.itouchsuqare">
+
+   <!--  <class name="Patient" table="neo_patient_t">
+        <id name="patient_ID" column="patient_ID">
+            <generator class="native"/>
+        </id>
+        <property name="patient_t_date" type="timestamp" column="patient_t_date"/>
+        <property name="hospital_reg_code" type="varchar" column="hospital_reg_code"/>
+        <property name="gender" type="varchar" column="gender" not-null="true"/>
+		<property name="patient_firstname" type="varchar" column="patient_firstname" not-null="true"/>
+		<property name="patient_lastname" type="varchar" column="patient_lastname"/>
+        <property name="patient_dob" type="date" column="patient_dob" not-null="true"/>
+        <property name="patient_height" type="varchar" column="patient_height"/>
+        <property name="patient_weight" type="varchar" column="patient_weight"/>
+        <property name="patient_phone_number" type="number" column="patient_phone_number" not-null="true"/>
+        <property name="patient_email" type="email" column="patient_email" unique="true"/>
+        <property name="created_by" type="varchar" column="created_by" />
+        <property name="created_on" type="timestamp" column="created_on"/>
+        <property name="last_modified_by" type="varchar" column="last_modified_by"/>
+        <property name="last_modified_date" type="timestamp" column="last_modified_date"/>
+
+    </class>
+    
+    
+    
+ -->
+
+</hibernate-mapping>

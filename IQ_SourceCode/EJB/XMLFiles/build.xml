@@ -1,0 +1,33 @@
+<project name="Deploying a ejb" default="jar" basedir=".">
+<target name="init"
+      description="Initializes properties that are used by the other targets. ">
+      <tstamp/> 
+      <property name="build" value="/home/stateful" />
+</target>
+<target name="prepare" depends="init"
+     description="Creates META-INF directory" >
+      <echo message="Creating META-INF directory ..." />
+      <mkdir dir="${build}/build/META-INF" />
+</target>
+<target name="compile" depends="prepare"
+     description="Compiles source code">
+     <echo message="Compiling source code ..."/>
+     <javac
+     srcdir="${build}"
+     destdir="${build}/build"
+      includes="*.java"/>
+</target>
+<target name="copy" depends="compile">
+      <echo message="Copying ejb-jar.xml file to META-INF directory ..."/>
+      <copy
+       file="ejb-jar.xml"
+       todir="${build}/build/META-INF"
+       overwrite="yes"/>
+</target>
+     <target name="jar" depends="copy">
+     <echo message="Creating JAR file "/>
+     <jar destfile="C:\JBOSS\jboss-4.0.4.GA\server\default\deploy\Hello.jar"
+      basedir="${build}/build"
+      excludes="*.properties"/>
+</target>
+</project>

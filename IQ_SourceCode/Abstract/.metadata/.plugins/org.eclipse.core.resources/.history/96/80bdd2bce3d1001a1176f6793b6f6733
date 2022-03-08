@@ -1,0 +1,14 @@
+
+abstract class clsAbstractPerson 
+{
+	public void numberOfEyes()
+	{
+		System.out.println("Two Eyes");
+	}
+	
+	public void numberOfLegs()
+	{
+		
+	}
+	
+}

@@ -1,0 +1,12 @@
+
+public class clsCasting 
+{
+	public static void main(String[] args) 
+	{
+		double dbl = 3456.7890;
+		int i;
+		i = dbl;
+		
+	}
+
+}

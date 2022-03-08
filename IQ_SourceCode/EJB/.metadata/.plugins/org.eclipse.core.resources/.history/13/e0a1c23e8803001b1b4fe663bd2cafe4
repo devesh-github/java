@@ -1,0 +1,7 @@
+package Hello;
+
+public interface s {
+
+	public abstract String hello();
+
+}

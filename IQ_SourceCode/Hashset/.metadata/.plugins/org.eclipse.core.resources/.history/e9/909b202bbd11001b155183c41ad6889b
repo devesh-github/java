@@ -1,0 +1,19 @@
+// 
+import java.util.*;
+   
+class clsHashSet {
+  public static void main(String args[]) {
+    // Create a hash set.
+    HashSet objHash = new HashSet();
+   
+    // Add elements to the hash set.
+    objHash.add("B");
+    objHash.add("A");
+    objHash.add("D");
+    objHash.add("E");
+    objHash.add("C");
+    objHash.add("F");
+    // Display the Hash results
+    System.out.println(objHash);
+  }
+}

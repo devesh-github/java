@@ -1,0 +1,10 @@
+
+public class clsMale extends clsAbstractPerson 
+{
+
+	public void Sex()
+	{
+		
+	}
+	
+}

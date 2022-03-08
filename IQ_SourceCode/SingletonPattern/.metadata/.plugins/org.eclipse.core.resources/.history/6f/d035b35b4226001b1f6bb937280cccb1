@@ -1,0 +1,10 @@
+public class clsSingleton {
+    // Private constructor suppresses generation of a (public) default constructor
+    private clsSingleton() {}
+    private static class SingletonHolder {
+           private static Singleton instance = new Singleton();
+    } 
+    public static Singleton getInstance() {
+        return SingletonHolder.instance;
+    }
+ }

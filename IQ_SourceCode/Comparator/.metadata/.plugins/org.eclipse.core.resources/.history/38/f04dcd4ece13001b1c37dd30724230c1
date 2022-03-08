@@ -1,0 +1,16 @@
+import java.util.*;
+public class clsComparator 
+		implements Comparator 
+{
+	public int compare(Object arg0, Object arg1) 
+	{
+		int num1;
+		int num2;
+		
+		if (num1 > num2)
+		{
+			
+		}
+	}
+
+}

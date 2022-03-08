@@ -1,0 +1,17 @@
+package MyNumbers;
+import java.lang.*;
+import java.util.logging.ConsoleHandler;
+
+public class MyTest 
+{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		NumberToWords x = new NumberToWords();
+		String y = x.GetWords(1);
+		
+}

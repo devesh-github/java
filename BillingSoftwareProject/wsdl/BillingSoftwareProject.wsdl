@@ -1,0 +1,45 @@
+<definitions
+     targetNamespace="http://BillingSoftwareProject/"
+     xmlns="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://BillingSoftwareProject/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+     xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    >
+	<types>
+		 <xsd:schema>
+			 <xsd:import namespace="http://BillingSoftwareProject/" schemaLocation="BillingSoftwareProject.xsd"/>
+		 </xsd:schema>
+	</types>
+	<message name ="request">
+		<part name="parameters" element="tns:Request"/>
+	</message>
+	<message name ="response">
+		<part name="parameters" element="tns:Response"/>
+	</message>
+	<portType name="BillingSoftwareProject">
+		<operation name="menu">
+			<input message="tns:request"/>
+			<output message="tns:response"/>
+		</operation>
+	</portType>
+	<binding name="BillingSoftwareProjectPortBinding" type="tns:BillingSoftwareProject">
+		<soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="menu">
+			<soap12:operation soapAction="http://BillingSoftwareProject/" soapActionRequired="false"/>
+			<input>
+				<soap12:body use="literal"/>
+			</input>
+			<output>
+				<soap12:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="BillingSoftwareProjectWS">
+		<port name="BillingSoftwareProjectPort" binding="tns:BillingSoftwareProjectPortBinding">
+			<soap12:address location="http://localhost:8080/BillingSoftwareProject/BillingSoftwareProjectWS"/>
+		</port>
+	</service>
+</definitions>
+	

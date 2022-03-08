@@ -1,0 +1,11 @@
+public class clsMain 
+{
+	public static void main(String[] args) 
+	{
+		clsThread objclsThread1 = new clsThread();
+		objclsThread1.x = "Thread1";
+		
+
+	}
+
+}

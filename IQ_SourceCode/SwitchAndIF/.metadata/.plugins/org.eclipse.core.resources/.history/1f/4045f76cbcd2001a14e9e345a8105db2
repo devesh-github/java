@@ -1,0 +1,19 @@
+
+public class ClsRun 
+{
+ 
+	
+	public static void main(String[] args) 
+	{
+		
+		displayString(" Displaying weeks using IF Statements ");
+		
+		displayString(" Displaying weeks using SWITCH / CASE Statements ");
+	}
+	
+	 
+	private static void displayString(String str)
+	{
+		System.out.println(str);
+	}
+}

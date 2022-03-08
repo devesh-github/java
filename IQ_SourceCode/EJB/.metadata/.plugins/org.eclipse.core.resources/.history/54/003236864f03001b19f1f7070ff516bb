@@ -1,0 +1,10 @@
+
+public interface HelloInterFace extends javax.ejb.EJBObject
+{ 
+    
+  /**
+   * The one method - hello - returns a greeting to the client.
+   */
+  public String hello() throws java.rmi.RemoteException;
+} 
+

@@ -1,0 +1,15 @@
+import java.lang.*;;
+class clsSynchronized
+{
+    double intCount;
+
+    synchronized void Safe()
+    {   
+    	x++;
+    }
+
+    public void UnSafe()    
+    {        x++;        
+    }                       
+}
+

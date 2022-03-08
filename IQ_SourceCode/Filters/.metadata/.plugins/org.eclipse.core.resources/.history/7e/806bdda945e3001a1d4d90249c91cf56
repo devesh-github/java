@@ -1,0 +1,51 @@
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+
+import java.util.Enumeration;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+import javax.servlet.*;
+import java.io.*;
+
+public class clsTimeFilter implements Filter
+{
+  private FilterConfig filterConfig;
+  
+  public void destroy()
+  {}
+  public void init(FilterConfig objFilterConfig)
+  {}
+  public void doFilter (ServletRequest request,
+              ServletResponse response,
+              FilterChain chain)
+  {
+	  long before = System.currentTimeMillis();
+	    chain.doFilter(request, response);
+	    long after = System.currentTimeMillis();
+
+	    String name = "";
+	    if (request instanceof HttpServletRequest) 
+	    {
+	      name = ((HttpServletRequest)request).getRequestURI();
+	    }
+	    config.getServletContext().log(name + ": " + (after - before) + "ms");
+
+  }
+
+  public FilterConfig getFilterConfig()
+  {
+    return this.filterConfig;
+  }
+
+  public void setFilterConfig (FilterConfig filterConfig)
+  {
+    this.filterConfig = filterConfig;
+  }
+}
+

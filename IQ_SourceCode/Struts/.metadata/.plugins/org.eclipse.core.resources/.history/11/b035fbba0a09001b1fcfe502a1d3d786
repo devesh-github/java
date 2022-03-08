@@ -1,0 +1,7 @@
+package MyNumbers;
+
+public class NumberToWords 
+{
+	ArrayList resultList = new ArrayList()
+
+}

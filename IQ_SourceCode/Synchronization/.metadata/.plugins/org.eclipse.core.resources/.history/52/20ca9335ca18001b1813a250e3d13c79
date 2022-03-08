@@ -1,0 +1,17 @@
+import java.lang.*;;
+class clsSynchronized
+{
+    double x;
+
+    public void synchronized thelma()
+
+    {   
+    	x = 0;
+    	return;
+    }
+
+    public void louise()    // WRONG! doesn't acquire mutex
+    {        x = -1;        // before modifying (non-atomic)
+    }                       // field.
+}
+

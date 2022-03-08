@@ -1,0 +1,9 @@
+
+public class clsMale extends clsAbstractPerson {
+
+	public void Sex() 
+	{
+		super.Sex();
+	}
+
+}

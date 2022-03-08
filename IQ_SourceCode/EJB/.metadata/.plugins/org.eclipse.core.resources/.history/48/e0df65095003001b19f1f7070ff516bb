@@ -1,0 +1,37 @@
+import javax.ejb.SessionContext;
+
+public class HelloBean implements javax.ejb.SessionBean { 
+    
+    private SessionContext ctx;
+    
+    //
+    // EJB-required methods
+    //
+    public void ejbCreate() { 
+        System.out.println("ejbCreate()");
+    } 
+    
+    public void ejbRemove() { 
+        System.out.println("ejbRemove()");
+    } 
+    
+    public void ejbActivate() { 
+        System.out.println("ejbActivate()");
+    } 
+    
+    public void ejbPassivate() { 
+        System.out.println("ejbPassivate()");
+    } 
+    
+    public void setSessionContext(javax.ejb.SessionContext ctx) { 
+        this.ctx = ctx;
+    } 
+    
+    //
+    // Business methods
+    //
+    public String hello() { 
+        System.out.println("hello()");
+        return "Hello, World!";
+    } 
+} 

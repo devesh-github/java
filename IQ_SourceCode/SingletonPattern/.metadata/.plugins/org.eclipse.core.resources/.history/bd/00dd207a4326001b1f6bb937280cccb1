@@ -1,0 +1,14 @@
+public class clsSingleton {
+    
+    private clsSingleton() 
+    {
+    	// define the constructor private
+    }
+    public int intcount;
+    private static clsSingleton instance = new clsSingleton();
+     
+    public static clsSingleton getInstance() 
+    {
+        return instance;
+    }
+ }

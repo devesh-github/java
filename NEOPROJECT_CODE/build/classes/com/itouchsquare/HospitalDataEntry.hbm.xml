@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.itouchsquare">
+		
+		<!-- hbm file for HospitalDataEntry Page -->
+	   <class name="HospitalDataEntry" table="neo_hospital_t">
+		<id column="hospital_id" name="hospital_id">
+			<generator class="native"/>
+		</id>
+			
+		<property name="reg_code"  column="Hospital_reg_code" unique="true" />
+		<property name="hospital_name" column="Hospital_name" not-null="true" />
+		<property name="hospital_region" column="Hospital_Region" not-null="false" />
+		<property name="hospital_zone" column="Hospital_zone" not-null="true"/>		
+		<property name="hospital_phone" column="Hospital_phone_number" unique-key="true"/>
+		<property name="hospital_email" column="Hospital_email" unique="true"/>
+		<property name="created_by" not-null="false" column="created_by"/>
+		<property name="created_on" not-null="false" column="created_on"/>
+		<property name="last_modified_by" not-null="false" column="last_modified_by"/>
+		<property name="last_modified_date" not-null="false" column="last_modified_date"/>
+		
+
+	</class>  
+	
+	<!-- hbm file for common for Address Page -->
+	<class name="NeoAddress" table="neo_address_t">
+		<id name="a_id" column="a_id" >
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="add_line1"  column="address_line_1"/>
+		<property name="add_line2" column="address_line_2"/>
+		<property name="add_line3" column="address_line_3"/>
+		<property name="city" column="address_city"/>
+		<property name="zip_code" not-null="false" column="address_zipcode"/>
+		<property name="state" not-null="false" column="address_state"/>
+		<property name="country" not-null="false" column="address_country"/>
+		<property name="created_by" not-null="false" column="created_by"/>
+		<property name="created_on" not-null="false" column="created_on"/>
+		<property name="last_modified_by" not-null="false" column="last_modified_by"/>
+		<property name="last_modified_date" not-null="false" column="last_modified_date"/>
+		<property name="referenceid" unique="false" column="referenceid"/>
+		
+	
+		
+	</class>
+	
+	<!-- hbm file for Patient Page -->
+	  <class name="Patient" table="neo_patient_t">
+        <id name="patient_ID" column="patient_ID">
+            <generator class="native"/>
+        </id>
+        <!-- <property name="patient_t_date" column="patient_t_date"/> -->
+        <property name="hospital_reg_code"  column="hospital_reg_code"/>
+        <property name="gender" column="gender" not-null="true"/>
+		<property name="patient_firstname" column="patient_firstname" not-null="true"/>
+		<property name="patient_lastname"  column="patient_lastname"/>
+        <property name="patient_dob" column="patient_dob" not-null="true"/>
+        <property name="patient_height" column="patient_height"/>
+        <property name="patient_weight"  column="patient_weight"/>
+        <property name="patient_phone_number" column="patient_phone_number"/>
+        <property name="patient_email"  column="patient_email" unique="true"/>
+        <property name="created_by" column="created_by" />
+        <property name="created_on"  column="created_on"/>
+        <property name="last_modified_by" column="last_modified_by"/>
+        <property name="last_modified_date"  column="last_modified_date"/>
+
+    </class>
+	
+	<!-- hbm file for Staff Page -->
+	<class name="Staff" table="neo_staff_t">
+        <id name="staff_ID" column="staff_ID">
+            <generator class="native"/>
+        </id>
+       
+        <property name="hospital_reg_code"  column="hospital_reg_code"/>
+        <property name="staff_job_title" column="staff_job_title" />
+        <property name="gender" column="gender" not-null="true"/>
+		<property name="staff_firstname" column="staff_firstname" not-null="true"/>
+		<property name="staff_lastname"  column="staff_lastname"/>
+        <property name="staff_dob" column="staff_dob" not-null="true"/>
+        <property name="staff_mobile" column="staff_mobile"/>
+        <property name="staff_phone" column="staff_phone"/>
+        <property name="staff_phone_extension" column="staff_phone_extension"/>
+        <property name="staff_email"  column="staff_email" unique="true"/>
+        <property name="staff_doj" column="staff_doj"/>
+        <property name="created_by" column="created_by" />
+        <property name="created_on"  column="created_on"/>
+        <property name="last_modified_by" column="last_modified_by"/>
+        <property name="last_modified_date"  column="last_modified_date"/>
+
+    </class>
+	
+	<!-- hbm file for Login Page -->
+ 
+	<class name="Login" table="neo_login_t">
+        <id name="login_ID" column="login_ID">
+            <generator class="native"/>
+        </id>
+        <property name="login_PWD" column="login_PWD" unique="true"/>
+        <property name="usr_user_Id" column="usr_user_Id" not-null="true"/>
+        <property name="hos_reg_ID" column="hos_reg_ID" not-null="true"/>
+        <property name="created_by" column="created_by"/>
+        <property name="created_on" column="created_on" type="timestamp"/>
+        <property name="last_modified_by" column="last_modified_by"/>
+        <property name="last_modified_date" column="last_modified_date" type="timestamp"/>
+	
+	</class>
+</hibernate-mapping>

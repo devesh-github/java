@@ -1,0 +1,8 @@
+
+public class clsRun 
+{
+	static 
+	{
+        System.loadLibrary("JNILibrary");
+    }
+}

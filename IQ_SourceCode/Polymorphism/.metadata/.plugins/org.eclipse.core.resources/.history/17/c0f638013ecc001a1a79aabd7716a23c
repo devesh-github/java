@@ -1,0 +1,16 @@
+
+public class clsTestRun {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		clsPolymorphism objclsPolymorphism = new clsPolymorphism();
+		System.out.println("Two numbers input :- " + objclsPolymorphism.addNumber(10,10));
+		System.out.println("Three numbers input :- " + objclsPolymorphism.addNumber(10,10,10));
+		
+	}
+
+}

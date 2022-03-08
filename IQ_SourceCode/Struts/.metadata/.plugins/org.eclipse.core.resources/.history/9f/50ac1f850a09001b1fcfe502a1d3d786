@@ -1,0 +1,15 @@
+package MyNumbers;
+
+public class NumberToWords 
+{
+	  private static String strNumberToWords = 
+	  {
+	    new Employee("Bob Davidson", "123-45-6789"),
+	    new Employee("Mary Williams", "987-65-4321"),
+	    new Employee("Jim Smith", "111-11-1111"),
+	    new Employee("Beverly Harris", "222-22-2222"),
+	    new Employee("Thomas Frank", "333-33-3333"),
+	    new Employee("Jim Davidson", "444-44-4444")
+	  };
+
+}

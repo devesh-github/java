@@ -1,0 +1,23 @@
+import java.util.*;
+public class clsMain 
+{
+	public static void main(String[] args) 
+	{
+		TreeSet ts = new TreeSet(new clsComparator());
+		ts.add("4");
+		ts.add("1");
+		ts.add("2");
+		ts.add("3");
+		
+		Iterator i = ts.iterator();
+		while(i.hasNext())
+		{
+		Object el = i.next();
+		System.out.print(el +"");
+		}
+		}
+
+
+	}
+
+

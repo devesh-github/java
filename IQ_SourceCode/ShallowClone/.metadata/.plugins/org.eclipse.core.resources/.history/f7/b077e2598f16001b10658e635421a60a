@@ -1,0 +1,12 @@
+
+public class clsRun 
+{
+	public static void main (String [] args)
+	  {
+		clsExampleClone ex   =  new clsExampleClone (5);
+		clsExampleClone copy =  (clsExampleClone)ex.clone ();
+	    ex.myArray[0] = new Integer (111111);
+	    System.out.println ("Original value of Myarray[0] = " + ex.myArray[0]);
+	    System.out.println ("Copy value of Myarray[0] = " + copy.myArray[0]);
+	  } 
+}

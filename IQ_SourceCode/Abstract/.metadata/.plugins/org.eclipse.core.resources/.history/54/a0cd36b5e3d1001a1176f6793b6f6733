@@ -1,0 +1,14 @@
+
+abstract class clsAbstractPerson 
+{
+	public void numberOfEyes()
+	{
+		
+	}
+	
+	public void numberOfLegs()
+	{
+		
+	}
+	
+}

@@ -1,0 +1,6 @@
+public class clsJNI 
+{
+    public native int addTwoNumbers(int one, int two);
+    
+}
+

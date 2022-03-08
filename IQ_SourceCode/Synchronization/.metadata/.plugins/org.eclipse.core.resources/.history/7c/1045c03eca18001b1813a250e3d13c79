@@ -1,0 +1,16 @@
+import java.lang.*;;
+class clsSynchronized
+{
+    double x;
+
+    public void synchronized thelma()
+    {   
+    	x = 0;
+    	return;
+    }
+
+    public void louise()    
+    {        x = -1;        
+    }                       
+}
+

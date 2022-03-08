@@ -1,0 +1,21 @@
+
+public class clsTestRun {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		// 
+		
+		ClsAdd objClsAdd = new ClsAdd();
+		ClsSpecialAdd objClsSpecialAdd = new ClsSpecialAdd();
+		ClsSpecialAddAndDivide objClsSpecialAddAndDivide = new ClsSpecialAddAndDivide();
+		System.out.println("Simple addition :- " + objClsAdd.Add(2,3));
+		objClsAdd = objClsSpecialAdd;
+		System.out.println("Special addition :- " + objClsAdd.Add(2,3));
+		
+	}
+
+}

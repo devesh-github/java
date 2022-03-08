@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hospital Details</title>
+<style type="text/css">
+body {
+	background-image: url(img/background_1.jpg);
+}
+#form1 p #text_hospital_registration_code3 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_name {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_region {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_zone {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_phone_number {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_email {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_phone_number {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_address_line_1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_address_line_2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_address_line_3 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_city {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_zipcoce {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_state {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_state {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_country {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#form1 p #text_hospital_registration_code3 {
+	border: 1px none #CCC;
+}
+#form1 p #text_hospital_registration_code3 {
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+#form1 p #text_hospital_registration_code3 {
+	background-color: #CCC;
+}
+#form1 p #text_hospital_registration_code3 {
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+#form1 p #button_save {
+	font-weight: bold;
+}
+#form1 p #button_reset {
+	font-weight: bold;
+}
+#form1 p #button_next {
+	font-weight: bold;
+}
+#form1 p #button_cancel {
+	font-weight: bold;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	if( document.form1.text_hospital_registration_code.value == "" )
+	   {
+	     alert( "Please provide Hospital Registration Code!" );
+	     document.form1.text_hospital_registration_code.focus() ;
+	     return false;
+	   }	
+	if( document.form1.text_hospital_name.value == "" )
+	   {
+	     alert( "Please provide Hospital Name!" );
+	     document.form1.text_hospital_name.focus() ;
+	     return false;
+	   }	
+	if( document.form1.text_hospital_zone.value == "" )
+	   {
+	     alert( "Please provide Zone!" );
+	     document.form1.text_hospital_zone.focus() ;
+	     return false;
+	   }	
+	if( document.form1.text_hospital_region.value == "" )
+	   {
+	     alert( "Please provide Region!" );
+	     document.form1.text_hospital_region.focus() ;
+	     return false;
+	   }
+	var p=document.form1.text_hospital_phone_number.value;
+	if(isNaN(p)||p.indexOf()!=-1)
+		{
+		 alert("Please provide numeric number!");
+		 document.form1.text_hospital_phone_number.focus() ;
+	     return false;
+		}
+	if(p.length<10)
+		{
+		 alert("Please provide 10 digit mobile number!");
+		 document.form1.text_hospital_phone_number.focus() ;
+	     return false;
+		}
+	if( document.form1.text_hospital_email.value == "" )
+	   {
+	     alert( "Please provide Email!" );
+	     document.form1.text_hospital_email.focus() ;
+	     return false;
+	   }
+	if( document.form1.text_hospital_address_line_1.value == "" )
+	   {
+	     alert( "Please provide your Address!" );
+	     document.form1.text_hospital_address_line_1.focus() ;
+	     return false;
+	   }
+	if( document.form1.text_hospital_city.value == "" )
+	   {
+	     alert( "Please provide your City!" );
+	     document.form1.text_hospital_city.focus() ;
+	     return false;
+	   }	
+	if( document.form1.text_hospital_zipcoce == "" ||
+	           isNaN( document.form1.text_hospital_zipcoce.value ) ||
+	           document.form1.text_hospital_zipcoce.value.length != 6 )
+	   {
+	     alert( "Please provide a zip in the format ######." );
+	     document.form1.text_hospital_zipcoce.focus() ;
+	     return false;
+	   }
+	if( document.form1.text_hospital_state.value == "" )
+	   {
+	     alert( "Please provide your State Name!" );
+	     document.form1.text_hospital_state.focus() ;
+	     return false;
+	   }
+	if( document.form1.text_hospital_country.value == "" )
+	   {
+	     alert( "Please provide your Country Name!" );
+	     document.form1.text_hospital_country.focus() ;
+	     return false;
+	   }	
+}
+function search1()
+{
+	if( document.form1.text_hospital_registration_code.value == "" )
+	   {
+		 alert( "Please provide Hospital Registration Code Name!" );
+	     document.form1.text_hospital_registration_code.focus() ;
+	     return false;
+	   }
+	else
+	   {
+	     window.location="Search_Simple";
+	     return false;
+	     
+       }
+}
+function search2()
+{
+	if( document.getElementById("text_hospital_name").value == "" )
+	   {
+		 alert( "Please provide Hospital Name!" );
+	     document.form1.text_hospital_name.focus() ;
+	     return false;
+	   }
+	else 
+	   {
+		  
+	     window.location="Search_Simple";
+	     return false;
+	     
+       }
+	
+}
+function search3()
+{
+	if( document.getElementById("text_hospital_zone").value == "" )
+	   {
+		 alert( "Please provide Zone of Hospital!" );
+	     document.form1.text_hospital_zone.focus() ;
+	     return false;
+	   }
+	else 
+	   {
+	     window.location="login.x.html";
+	     return false;
+	     
+       }
+	
+}
+function search4()
+{
+	if( document.getElementById("text_hospital_region").value == "" )
+	   {
+		 alert( "Please provide Hospital Region!" );
+	     document.form1text_hospital_region.focus() ;
+	     return false;
+	   }
+	else 
+	   {
+	     window.location="login.x.html";
+	     return false;
+	     
+       }
+	
+}
+function search5()
+{
+	if( document.getElementById("text_hospital_phone_number").value == "" )
+	   {
+		 alert( "Please provide Phone Number!" );
+	     document.form1.text_hospital_phone_number.focus() ;
+	     return false;
+	   }
+	else 
+	   {
+	     window.location="login.x.html";
+	     return false;
+	     
+       }
+	
+}
+function search6()
+{
+	if( document.getElementById("text_hospital_zipcoce").value == "" )
+	   {
+		 alert( "Please provide Hospital Zipcode!" );
+	     document.form1.text_hospital_zipcoce.focus() ;
+	     return false;
+	   }
+	else 
+	   {
+	     window.location="login.x.html";
+	     return false;
+	     
+       }
+	
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="get" action="HospitalDataEntryServlet" onsubmit="return(validate());">
+  <p align="center">
+    <label for="text_hospital_registration_code3"></label>
+  <img src="img/LOGO.jpg" width="651" height="45" /></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p><img src="img/hosptial title.jpg" width="667" height="45" /></p>
+  <p><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="text_hospital_registration_code" type="text" id="text_hospital_registration_code3" value="Registration Code" size="50" maxlength="45" />
+    <img src="img/search.jpg" width="20" height="20" onclick="search1()"/>
+    <label for="text_hospital_name"></label>
+  &nbsp;&nbsp;&nbsp;</p>
+  <p> <img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="text_hospital_name" type="text" id="text_hospital_name" value="Hospital Name" size="50" maxlength="80" />
+  <img src="img/search.jpg" alt="" width="20" height="20" onclick="search2()"/>&nbsp;&nbsp;&nbsp;
+  <img src="img/MandatoryStar.gif" width="7" height="7" vspace="6" />
+  <input name="text_hospital_zone" type="text" id="text_hospital_zone" value="Zone" size="25" maxlength="45" />
+  <img src="img/search.jpg" alt="" width="20" height="20" onclick="search3()"/></p>
+  <p><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="text_hospital_region" type="text" id="text_hospital_region" value=" Region" size="50" maxlength="45" />
+    <img src="img/search.jpg" alt="" width="20" height="20" onclick="search4()"/>    &nbsp;&nbsp;
+<label for="text_hospital_zone"></label>
+  </p>
+  <p><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="text_hospital_phone_number" type="text" id="text_hospital_phone_number" value="Phone#" size="15" maxlength="10" />
+<img src="img/search.jpg" alt="" width="20" height="20" onclick="search5()"/>    &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/MandatoryStar.gif" width="7" height="7" vspace="6" />
+    <label for="text_hospital_email"></label>
+    <input name="text_hospital_email" type="text" id="text_hospital_email" value="Email" size="24" maxlength="45" />
+  </p>
+  <p><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="text_hospital_address_line_1" type="text" id="text_hospital_address_line_1" value="Address Line 1" size="50" maxlength="45" />
+  </p>
+  <p>
+    <label for="text_hospital_address_line_2">  </label>&nbsp;&nbsp;
+    <input name="text_hospital_address_line_2" type="text" id="text_hospital_address_line_2" value="Address Line 2" size="50" maxlength="45" />
+  </p>
+  <p>
+    <label for="text_hospital_address_line_3"></label>&nbsp;&nbsp;
+    <input name="text_hospital_address_line_3" type="text" id="text_hospital_address_line_3" value="Address Line 3" size="50" maxlength="45" />
+  </p>
+  <p><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="text_hospital_city" type="text" id="text_hospital_city" value="City" size="40" maxlength="45" />
+    &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/MandatoryStar.gif" width="7" height="7" vspace="6" />
+    <label for="text_hospital_zipcoce"></label>
+    <input name="text_hospital_zipcoce" type="text" id="text_hospital_zipcoce" value="Zipcode" size="10" maxlength="7" />
+  <img src="img/search.jpg" alt="" width="20" height="20" onclick="search6()"/>  </p>
+  <p><img src="img/MandatoryStar.gif" width="7" height="7" vspace="7" />
+    <input name="text_hospital_state" type="text" id="text_hospital_state" value="Karnataka" size="30" maxlength="45" />
+    &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/MandatoryStar.gif" width="7" height="7" vspace="6" />
+    <label for="text_hospital_country"></label>
+    <input name="text_hospital_country" type="text" id="text_hospital_country" value="India" size="20" maxlength="45" />
+  </p>
+  <p>&nbsp;</p>
+  <p align="justify">&nbsp;&nbsp;&nbsp;
+    <input type="submit" name="button_save" id="button_save" value="Save" />&nbsp;
+    <input type="reset" name="button_reset" id="button_reset" value="Reset" />&nbsp;
+    <input type="submit" name="button_next" id="button_next" value="Next" />&nbsp;
+    <input type="submit" name="button_cancel" id="button_cancel" value="Cancel" />
+  </p>
+  <p align="justify">&nbsp;</p>
+  <p align="justify">&nbsp; </p>
+  <p align="justify">&nbsp;&nbsp;&nbsp;<img src="img/BACK.png" width="124" height="69" /></p>
+  <blockquote>
+    <blockquote>
+      <blockquote>&nbsp;	</blockquote>
+    </blockquote>
+  </blockquote>
+  <p>&nbsp;</p>
+</form>
+<label for="text_hospital_registration_code"></label>	
+</body>
+</html>

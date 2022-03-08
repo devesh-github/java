@@ -1,0 +1,11 @@
+public class clsSingleton {
+    
+    private clsSingleton() {}
+    
+    private static clsSingleton instance = new clsSingleton();
+     
+    public static clsSingleton getInstance() 
+    {
+        return instance;
+    }
+ }

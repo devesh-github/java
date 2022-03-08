@@ -1,0 +1,8 @@
+package MyNumbers;
+import javax.servlet.http.HttpServletRequest;
+import org.apache.struts.action.*;
+
+public final class InputNumbersForm extends ActionForm 
+{
+
+}

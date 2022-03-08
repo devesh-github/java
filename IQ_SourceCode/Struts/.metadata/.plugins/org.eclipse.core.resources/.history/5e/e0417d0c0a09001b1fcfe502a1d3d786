@@ -1,0 +1,25 @@
+package MyNumbers;
+import javax.servlet.http.*;
+import org.apache.struts.action.*;
+ 
+public final class InputNumbersAction 
+			extends Action  
+{
+	  public ActionForward perform(ActionMapping mapping,
+		      InputNumbersForm form,
+		      HttpServletRequest request,
+		      HttpServletResponse response) 
+	  {
+
+		  SubmitForm f = (SubmitForm) form; // get the form bean
+		    // and take the last name value
+		    String lastName = f.getLastName(); 
+		    // Translate the name to upper case 
+		    //and save it in the request object 
+		    request.setAttribute("lastName", lastName.toUpperCase());
+		    
+		    // Forward control to the specified success target
+		    return (mapping.findForward("success"));
+		  }
+
+}

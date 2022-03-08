@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="show_sql">true</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@10.81.150.21:1521:DEOES2</property>
+  <property name="hibernate.connection.username">TEST</property>
+  <property name="hibernate.connection.password">Test123</property>
+  <!--  below configuration required if domain is annotated -->
+  <mapping class="com.security.entity.Department"/>
+  <mapping class="com.security.entity.DeptEmp"/>
+  <mapping class="com.security.entity.DeptManager"/>
+  <mapping class="com.security.entity.Employee"/>
+  <mapping class="com.security.entity.Salary"/>
+  <mapping class="com.security.entity.Title"/>
+  <!-- <mapping resource="domain/PcehrRecord.hbm.xml"/> -->
+ </session-factory>
+</hibernate-configuration>

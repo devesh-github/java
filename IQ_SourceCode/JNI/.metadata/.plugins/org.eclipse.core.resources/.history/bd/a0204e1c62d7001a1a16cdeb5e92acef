@@ -1,0 +1,10 @@
+public class clsJNI 
+{
+    public native int addTwoNumbers(int one, int two);
+    static 
+	{
+        System.loadLibrary("JNILibrary");
+    }
+    
+}
+

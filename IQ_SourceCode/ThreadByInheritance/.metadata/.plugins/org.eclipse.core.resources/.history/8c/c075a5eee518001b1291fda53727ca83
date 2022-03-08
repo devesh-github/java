@@ -1,0 +1,23 @@
+public class clsMain 
+{
+	public static void main(String[] args) 
+	{
+		clsThread objclsThread1 = new clsThread();
+		objclsThread1.x = "Thread1";
+		objclsThread1.start();
+
+		
+		clsThread objclsThread2 = new clsThread();
+		objclsThread2.x = "Thread1";
+		objclsThread2.start();
+		
+		clsThread objclsThread3 = new clsThread();
+		objclsThread3.x = "Thread1";
+		objclsThread3.start();
+		
+		clsThread objclsThread4 = new clsThread();
+		objclsThread4.x = "Thread1";
+		objclsThread4.start();
+	}
+
+}

@@ -1,0 +1,17 @@
+
+public class clsString {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		String x;
+		x= "FirstString";
+		System.out.println(x);
+		x="SecondString";
+		System.out.println(x);
+	}
+
+}

@@ -1,0 +1,32 @@
+import java.io.*;
+import javax.servlet.http.*;
+import javax.servlet.ServletException;
+
+public class clsSessions extends HttpServlet 
+{
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+throws ServletException, IOException 
+{
+	HttpSession presentSession = request.getSession(true);
+	String strName = (String)presentSession.getValue("Name");
+	PrintWriter objWriter = response.getWriter();
+	
+	if (strName == null)
+	{	
+		String strobj = new String("Data from Session");
+		presentSession.putValue("Name", strobj);
+		strName = strobj;
+		objWriter.println(" Inserted first time in to session");
+	}
+	
+	
+	
+	objWriter.println(" Taken from session variable");
+	objWriter.println(" Name = " + strName);
+	
+	
+	
+	
+}
+
+}

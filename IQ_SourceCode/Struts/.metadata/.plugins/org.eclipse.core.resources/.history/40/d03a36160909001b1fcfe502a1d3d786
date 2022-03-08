@@ -1,0 +1,19 @@
+package MyNumbers;
+import javax.servlet.http.HttpServletRequest;
+import org.apache.struts.action.*;
+
+public final class InputNumbersForm extends ActionForm 
+{
+	private int intNumber;
+	private String strNumber;
+	
+	public String getNumber() 
+	{
+		  return (intNumber);
+	}
+	  
+	  	public void setLastName(String lastName) {
+		    this.lastName = lastName;
+		  }
+
+}

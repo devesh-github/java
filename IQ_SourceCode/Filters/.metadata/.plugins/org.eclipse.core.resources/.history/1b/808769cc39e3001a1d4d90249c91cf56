@@ -1,0 +1,102 @@
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.RequestDispatcher;
+
+import java.util.Enumeration;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+
+public class clsFirstFilter implements Filter
+{
+  private FilterConfig filterConfig;
+  
+  public void destroy()
+  {}
+  public void init(FilterConfig objFilterConfig)
+  {}
+  public void doFilter (ServletRequest request,
+              ServletResponse response,
+              FilterChain chain)
+  {
+
+    RequestDispatcher rd = null;
+    boolean emptyform = false;
+
+    try
+    {
+
+      Enumeration initParams = filterConfig.getInitParameterNames();
+
+      // no initial parameters so invoke next element in chain
+      if (initParams == null)
+      {
+        System.out.println("No elements to verify");
+      }
+
+      // grab init param values and get the form elements
+      else
+      {
+        while (initParams.hasMoreElements())
+        {
+          String name = (String) initParams.nextElement();
+          String value = filterConfig.getInitParameter(name);
+
+          String formElement = request.getParameter(value);
+
+          // check to see if element exists (i.e. form was sent)
+          if (formElement == null)
+          {
+            rd = request.getRequestDispatcher("/noform");
+            rd.forward(request, response);
+          }
+
+          // check to see if elements are empty
+          else if (formElement.equals(""))
+          {
+            emptyform = true;
+          }
+        }
+
+        // a form element was empty
+        if (emptyform)
+        {
+          rd = request.getRequestDispatcher("/emptyform");
+          rd.forward(request, response);
+        }
+
+        // form was filled out properly
+        else
+        {
+          chain.doFilter(request, response);
+        }
+      }
+    }
+
+    catch (IOException io)
+    {
+      System.out.println("IOException raised");
+    }
+    catch (ServletException se)
+    {
+      System.out.println("ServletException raised");
+    }
+
+
+
+  }
+
+  public FilterConfig getFilterConfig()
+  {
+    return this.filterConfig;
+  }
+
+  public void setFilterConfig (FilterConfig filterConfig)
+  {
+    this.filterConfig = filterConfig;
+  }
+}
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/chaya_000/.m2/repository/org/apache/camel/camel-spring/2.15.1/camel-spring-2.15.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/chaya_000/.m2/repository/org/apache/camel/camel-core/2.15.1/camel-core-2.15.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/chaya_000/.m2/repository/org/apache/camel/camel-jms/2.15.1/camel-jms-2.15.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/chaya_000/.m2/repository/org/apache/camel/camel-stream/2.15.1/camel-stream-2.15.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/chaya_000/.m2/repository/org/springframework/spring-context/4.1.5.RELEASE/spring-context-4.1.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/chaya_000/.m2/repository/org/apache/activemq/activemq-camel/5.6.0/activemq-camel-5.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/chaya_000/.m2/repository/org/apache/activemq/activemq-core/5.6.0/activemq-core-5.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/chaya_000/.m2/repository/org/springframework/spring-beans/4.1.5.RELEASE/spring-beans-4.1.5.RELEASE.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

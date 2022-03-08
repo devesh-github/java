@@ -1,0 +1,34 @@
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+import javax.servlet.RequestDispatcher;
+import java.io.*;
+public class clsMaths extends HttpServlet
+{
+	public void service(HttpServletRequest request,
+	HttpServletResponse response)
+	throws ServletException, IOException
+	{
+//	 Obtain a RequestDispatcher Object from
+//	 ServletContext
+	RequestDispatcher dispatch =	getServletContext().getRequestDispatcher(
+	"/servlets/Add.class");
+
+//	 Check if the call to getRequestDipatcher was successful
+
+	if (dispatch == null)
+	{
+	response.sendError(response.SC_NO_CONTENT);
+	return;
+	}
+
+//	 Create a new session for this user
+
+	HttpSession session = request.getSession();
+
+//	Use the Request Dispatcher to forward the
+//	request to the required resource
+
+	dispatch.forward(request, response);
+	}
+	}
+

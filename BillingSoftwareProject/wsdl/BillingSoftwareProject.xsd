@@ -1,0 +1,126 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://BillingSoftwareProject/" targetNamespace="http://BillingSoftwareProject/"
+	elementFormDefault="qualified">
+	<xsd:element name="Request" type="tns:input" />
+	<xsd:complexType name="input">
+		<xsd:sequence>
+			<xsd:element name="number1" type="xsd:long" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Response" type="tns:output" />
+	<xsd:complexType name="output">
+		<xsd:sequence>
+			<xsd:element name="result" type="tns:getMenu" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="getMenu">
+		<xsd:sequence>
+			<xsd:element name="burgher" type="tns:burgher" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="colddrinks" type="tns:colddrinks" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="fries" type="tns:fries" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="toys" type="tns:toys" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="icecreams" type="tns:icecreams" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- Burgher -->
+	<xsd:complexType name="burgher">
+		<xsd:sequence>
+			<xsd:element name="burgherType" type="tns:burgherType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="burgherPrice" type="tns:burgherPrice" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="burgherType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="NonVegBurgher"/>
+			<xsd:enumeration value="VegBurgher"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="burgherPrice">
+		<xsd:restriction base="xsd:int">
+			<xsd:enumeration value="40"/>
+			<xsd:enumeration value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- ColdDrinks -->
+	<xsd:complexType name="colddrinks">
+		<xsd:sequence>
+			<xsd:element name="colddrinksType" type="tns:colddrinksType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="colddrinksPrice" type="tns:colddrinksPrice" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="colddrinksType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Coke"/>
+			<xsd:enumeration value="Pepsi"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="colddrinksPrice">
+		<xsd:restriction base="xsd:int">
+			<xsd:enumeration value="40"/>
+			<xsd:enumeration value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- Fries -->
+	<xsd:complexType name="fries">
+		<xsd:sequence>
+			<xsd:element name="friesType" type="tns:friesType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="friesPrice" type="tns:friesPrice" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="friesType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="NonVegfries"/>
+			<xsd:enumeration value="Vegfries"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="friesPrice">
+		<xsd:restriction base="xsd:int">
+			<xsd:enumeration value="40"/>
+			<xsd:enumeration value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- Toys -->
+	<xsd:complexType name="toys">
+		<xsd:sequence>
+			<xsd:element name="toysType" type="tns:toysType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="toysPrice" type="tns:toysPrice" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="toysType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Toy1"/>
+			<xsd:enumeration value="Toy2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="toysPrice">
+		<xsd:restriction base="xsd:int">
+			<xsd:enumeration value="40"/>
+			<xsd:enumeration value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- IceCreams -->
+	<xsd:complexType name="icecreams">
+		<xsd:sequence>
+			<xsd:element name="icecreamsType" type="tns:icecreamsType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="icecreamsPrice" type="tns:icecreamsPrice" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="icecreamsType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Chocolate"/>
+			<xsd:enumeration value="Butterscotch"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="icecreamsPrice">
+		<xsd:restriction base="xsd:int">
+			<xsd:enumeration value="40"/>
+			<xsd:enumeration value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

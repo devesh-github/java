@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/JBOSS/jboss-4.0.4.GA/client/jboss-j2ee.jar"/>
+	<classpathentry kind="lib" path="C:/JBOSS/jboss-4.0.4.GA/client/jnp-client.jar"/>
+	<classpathentry kind="lib" path="C:/JBOSS/jboss-4.0.4.GA/client/jbossall-client.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

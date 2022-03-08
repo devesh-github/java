@@ -1,0 +1,13 @@
+class clsSynchronized
+{
+    double x;
+
+    public void synchronized thelma()
+    {   x = 0;
+    }
+
+    public void louise()    // WRONG! doesn't acquire mutex
+    {        x = -1;        // before modifying (non-atomic)
+    }                       // field.
+}
+

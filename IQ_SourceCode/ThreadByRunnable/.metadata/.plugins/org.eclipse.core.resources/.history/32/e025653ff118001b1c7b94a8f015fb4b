@@ -1,0 +1,28 @@
+public class clsThreadRunnable  
+implements Runnable 
+{ 
+    int data; 
+    public clsThreadRunnable()
+    { 
+        data = 0; 
+    } 
+
+    public void run(){ 
+        //this method runs when start() is invoked on the thread 
+        System.out.println( data ); 
+    } 
+
+    public Thread getNewThread(){ 
+        Thread t = new Thread( this ); 
+        return t; 
+    } 
+
+    public static void main( String[] args ){ 
+        clsThreadRunnable threadedClass = new clsThreadRunnable(); 
+        Thread t1 = threadedClass.getNewThread(); 
+        t1.start(); 
+
+        Thread t2 = threadedClass.getNewThread(); 
+        t2.start(); 
+    } 
+}

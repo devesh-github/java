@@ -1,0 +1,6 @@
+import java.util.Observable;
+
+public class clsIamObserved extends Observable
+{
+
+}

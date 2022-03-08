@@ -1,0 +1,16 @@
+
+public class clsRun 
+{
+	public static void main(String[] args) 
+	{
+		clsMale objclsMale = new clsMale();
+		objclsMale.numberOfEyes();
+		objclsMale.numberOfLegs();
+		objclsMale.Sex();
+		
+		
+		
+
+	}
+
+}

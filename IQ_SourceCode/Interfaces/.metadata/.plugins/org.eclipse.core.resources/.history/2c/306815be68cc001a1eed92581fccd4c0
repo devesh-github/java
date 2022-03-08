@@ -1,0 +1,39 @@
+
+public class clsSoftware implements ISoftwareLifeCycle
+{
+
+	public void Estimation() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void Execution() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void PackagingAndDeployment() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void prepareTechnicalSpecifications() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void requirementGathering() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void Testing() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+}

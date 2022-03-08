@@ -1,0 +1,7 @@
+
+public interface HelloHome extends javax.ejb.EJBHome
+{ 
+    HelloInterFace create() throws 
+    				java.rmi.RemoteException,
+    				javax.ejb.CreateException;
+} 

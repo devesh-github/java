@@ -1,0 +1,15 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://mywebservice/" targetNamespace="http://mywebservice/" elementFormDefault="qualified">
+	<xsd:element name="Request" type="tns:input"/>
+	<xsd:complexType name="input">
+		<xsd:sequence>
+			<xsd:element name="number1" type="xsd:long" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="number2" type="xsd:long" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Response" type="tns:output"/>
+	<xsd:complexType name="output">
+		<xsd:sequence>
+			<xsd:element name="result" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,23 @@
+import java.util.*;
+public class clsMain 
+{
+	public static void main(String[] args) 
+	{
+		TreeSet ts = new TreeSet(new mycomp());
+		ts.add("M");
+		ts.add("Q");
+		ts.add("N");
+		ts.add("P");
+		ts.add("O");
+		Iterator i = ts.iterator();
+		while(i.hasNext())
+		{
+		Object el = i.next();
+		System.out.print(el +"");
+		}
+		}
+
+
+	}
+
+}

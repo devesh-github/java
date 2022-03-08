@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.Random;
+import javax.servlet.http.*;
+import javax.servlet.ServletException;
+
+public class clsUrlRewriting extends HttpServlet 
+{
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+throws ServletException, IOException 
+{
+	String strToken = request.getParameter("id");
+	PrintWriter objWriter = new PrintWriter();
+	if (strToken == null)
+	{
+		Random rand = new Random();
+		strToken = Long.toString(rand.nextLong());
+	}
+	
+}
+
+}

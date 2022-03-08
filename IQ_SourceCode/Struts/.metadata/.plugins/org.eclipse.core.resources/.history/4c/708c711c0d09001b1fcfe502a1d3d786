@@ -1,0 +1,26 @@
+package MyNumbers;
+import java.util.ArrayList;
+public class NumberToWords 
+{
+	ArrayList resultList = new ArrayList();
+	public NumberToWords()
+	{
+		resultList.add(1,new String("One"));
+		resultList.add(2,new String("Two"));
+		resultList.add(3,new String("Three"));
+		resultList.add(4,new String("Four"));
+		resultList.add(5,new String("Five"));
+		resultList.add(6,new String("Six"));
+		resultList.add(7,new String("Seven"));
+		resultList.add(8,new String("Eight"));
+		resultList.add(9,new String("Nine"));
+		resultList.add(0,new String("Zero"));
+		
+	}
+	
+	public String GetWords(int intnumber)
+	{
+		String strRet = resultList.get(intnumber).toString();
+		return strRet;
+	}
+}

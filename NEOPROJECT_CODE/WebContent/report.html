@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Report</title>
+<style type="text/css">
+#text_phone_number {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#text_name {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#text_dob {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#text_doj {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#text_hospital_registration_code {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#text_hospital_region {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#text_hospital_zone {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+</style>
+</head>
+
+<body>
+<div align="center">
+  <p><img src="img/search.png" width="175" height="53" /></p>
+  <p>&nbsp;</p>
+  <form id="form1" name="form1" method="get" action="ReportServlet">
+    <div align="left">
+      <p>
+        <label>
+<input type="radio" name="radio" id="radio_patient" value="radio_patient" 
+onclick="text_phone_number.disabled=false;text_name.disabled=false;textfield.disabled=true;text_doj.disabled=true;text_registration_number.disabled=true;text_region.disabled=true;text_hospital_zone.disabled=true"/>
+Patient</label>
+        
+        <label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="radio" id="radio_staff" value="radio_staff" 
+onclick="text_phone_number.disabled=false;text_name.disabled=false;textfield.disabled=false;text_doj.disabled=false;text_registration_number.disabled=true;text_region.disabled=true;text_hospital_zone.disabled=true"/>          
+Staff</label>
+        
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label>
+<input type="radio" name="radio" id="radio_hospital" value="radio_hospital" 
+onclick="text_phone_number.disabled=false;text_name.disabled=false;textfield.disabled=true;text_doj.disabled=true;text_registration_number.disabled=false;text_region.disabled=false;text_hospital_zone.disabled=false"/>
+Hospital</label>
+        
+      </p>
+    </div>
+  
+  <fieldset>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search : 
+      <label for="text_phone_number"></label>
+      <input name="text_phone_number" type="text" id="text_phone_number" value="Mobile/Phone" size="15" maxlength="10" />
+      &nbsp;&nbsp;&nbsp;&nbsp;<label for="text_name"></label>
+      <input name="text_name" type="text" id="text_name" value="Name" size="50" maxlength="45" />
+    </p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Additional Search For Staff : 
+      <input name="textfield" type="text" id="text_dob" value="DOB" size="11" maxlength="10" />&nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="text_doj"></label>
+      <input name="text_doj" type="text" id="text_doj" value="DOJ" size="12" maxlength="10" />
+    </p>
+    <p align="left">Additional Search For Hospital : 
+      <label for="text_registration_number"></label>
+      <input name="text_registration_number" type="text" id="text_hospital_registration_code" value="Registration Code" size="50" maxlength="45" />
+      <label for="text_region"><br />
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </label>
+      <input name="text_region" type="text" id="text_hospital_region" value="Region" size="50" maxlength="45" />
+    </p>
+    <p align="left">
+      <label for="text_hospital_zone">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input name="text_hospital_zone" type="text" id="text_hospital_zone" value="Zone" size="50" maxlength="45" />
+    </p>
+    <p align="left">&nbsp;</p>
+    <p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="image" src="img/download.png"width="159" height="34" alt="Submit"/></p>
+    <p align="left">&nbsp; </p>
+  </fieldset>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+#Sun Jun 25 18:28:50 GMT+05:30 2006
+eclipse.preferences.version=1
+org.eclipse.debug.ui.opened_views=/org.eclipse.debug.ui.DebugPerspective
+org.eclipse.debug.ui.views_to_not_open=org.eclipse.ui.console.ConsoleView,org.eclipse.debug.ui.DebugView,

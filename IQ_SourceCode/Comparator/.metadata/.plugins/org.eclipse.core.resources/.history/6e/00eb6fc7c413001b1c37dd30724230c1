@@ -1,0 +1,11 @@
+import java.util.*;
+public class clsComparator 
+		implements Comparator 
+{
+	public int compare(Object arg0, Object arg1) 
+	{
+		
+		
+	}
+
+}

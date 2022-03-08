@@ -1,0 +1,24 @@
+package MyNumbers;
+import javax.servlet.http.*;
+import org.apache.struts.action.*;
+ 
+public final class InputNumbersAction 
+			extends Action  
+{
+	  public ActionForward perform(ActionMapping mapping,
+		      InputNumbersForm form,
+		      HttpServletRequest request,
+		      HttpServletResponse response) 
+	  {
+
+		  	InputNumbersForm f = (InputNumbersForm) form; // get the form bean
+
+		    int lastName = f.getLastName(); 
+ 
+		    request.setAttribute("lastName", lastName.toUpperCase());
+		    
+
+		    return (mapping.findForward("success"));
+		  }
+
+}

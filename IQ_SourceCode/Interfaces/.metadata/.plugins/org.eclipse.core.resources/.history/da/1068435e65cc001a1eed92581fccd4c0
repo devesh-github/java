@@ -1,0 +1,13 @@
+
+public interface ISoftwareLifeCycle 
+{
+	void requirementGathering();
+	
+	void Estimation();
+	
+	void prepareTechnicalSpecifications();
+
+	void Execution();
+	
+	
+}

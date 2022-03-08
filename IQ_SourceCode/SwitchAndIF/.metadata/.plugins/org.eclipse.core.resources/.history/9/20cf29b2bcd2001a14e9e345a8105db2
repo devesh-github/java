@@ -1,0 +1,25 @@
+
+public class ClsRun 
+{
+ 
+	
+	public static void main(String[] args) 
+	{
+		int intWeekArr[] = {1,2,3,4,5,6,7};
+		displayString(" Displaying weeks using IF Statements ");
+		
+		for (int i ; i < intWeekArr.length;i++)
+		{
+			
+		}
+		
+		
+		displayString(" Displaying weeks using SWITCH / CASE Statements ");
+	}
+	
+	 
+	private static void displayString(String str)
+	{
+		System.out.println(str);
+	}
+}

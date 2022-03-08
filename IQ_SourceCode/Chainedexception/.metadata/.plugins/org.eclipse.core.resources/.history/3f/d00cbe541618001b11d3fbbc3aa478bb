@@ -1,0 +1,28 @@
+class clsChained 
+{
+	
+static void demoproc() 
+{
+	
+// create an exception
+NullPointerException e = new NullPointerException("First layer");
+
+// add a cause
+e.initCause(new ArithmeticException("Arthimetic"));
+
+throw e;
+}
+   
+  public static void main(String args[]) {
+    try {
+      demoproc();
+    } catch(NullPointerException e) {
+      // display First layer exception
+      System.out.println("Caught: " + e);
+   
+      // Display the cause of exception
+      System.out.println("Original cause: " +
+                          e.getCause());
+    }
+  }
+}

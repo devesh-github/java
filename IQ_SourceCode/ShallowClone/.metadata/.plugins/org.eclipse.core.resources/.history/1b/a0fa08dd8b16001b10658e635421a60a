@@ -1,0 +1,39 @@
+import java.util.*;
+public class clsExampleClone implements Cloneable 
+{
+  int fNum;
+  Integer [] fIarray;
+
+  clsExampleClone (int nElements) 
+  {
+    fNum = nElements;
+    fIarray = new Integer[fNum];
+    // Set the array to random values
+    Random ran = new Random ();
+    for (int i=0; i < fNum; i++)
+    {fIarray[i] = new Integer (ran.nextInt (10000));}
+
+  } 
+
+  public Object clone () 
+  {
+    try  {return super.clone ();}
+    catch (CloneNotSupportedException e) 
+    {throw new Error ("Clone Error");}
+  } // clone
+
+  public static void main (String [] args)
+  {
+    Example ex   =  new Example (5);
+    Example copy =  (Example)ex.clone ();
+
+    // Change a value in the original array.
+    ex.fIarray[0] = new Integer (1234567);
+
+    // Then the copy's value also changes since it references
+    // the same array.
+    System.out.println ("Original iarray[0] = " + ex.fIarray[0]);
+    System.out.println ("Copy     iarray[0] = " + copy.fIarray[0]);
+  } // main
+
+}

@@ -1,0 +1,17 @@
+
+public class clsStaticInit 
+{
+	static
+	{
+		System.out.println("Inside Static");
+	}
+	clsStaticInit()
+	{	
+		System.out.println("Inside Constructor");
+	}
+	public static void main(String args[]) 
+	{
+		clsStaticInit() x = new clsStaticInit()
+		System.out.println("Inside Main");
+	}
+}

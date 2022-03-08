@@ -1,0 +1,160 @@
+--------------------------------------------------------
+--  File created - Wednesday-February-13-2013   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table DEPARTMENTS
+--------------------------------------------------------
+
+  CREATE TABLE DEPARTMENTS 
+   (	DEPT_NO DOUBLE, 
+	DEPT_NAME VARCHAR(200 )
+   )  ;
+--------------------------------------------------------
+--  DDL for Table DEPT_EMP
+--------------------------------------------------------
+
+  CREATE TABLE DEPT_EMP 
+   (	DEID DOUBLE, 
+	EMPNO DOUBLE, 
+	DEPTNO DOUBLE, 
+	FROM_DATE DATE, 
+	TO_DATE DATE
+   ) ;
+--------------------------------------------------------
+--  DDL for Table DEPT_MANAGER
+--------------------------------------------------------
+
+  CREATE TABLE DEPT_MANAGER 
+   (	DMID DOUBLE, 
+	EMPNUMBER DOUBLE, 
+	DEPTNUMBER DOUBLE, 
+	FROM_DATE DATE, 
+	TO_DATE DATE
+   ) ;
+--------------------------------------------------------
+--  DDL for Table EMPLOYEES
+--------------------------------------------------------
+
+  CREATE TABLE EMPLOYEES 
+   (	EMP_NO DOUBLE, 
+	BIRTH_DATE DATE, 
+	FIRST_NAME VARCHAR(100 ), 
+	LAST_NAME VARCHAR(100 ), 
+	HIRE_DATE DATE, 
+	TITLESNO DOUBLE
+   ) ;
+--------------------------------------------------------
+--  DDL for Table SALARIES
+--------------------------------------------------------
+
+  CREATE TABLE SALARIES 
+   (	SALID DOUBLE, 
+	EMPNO DOUBLE, 
+	SALARY DOUBLE, 
+	FROM_DATE DATE, 
+	TO_DATE DATE
+   )  ;
+--------------------------------------------------------
+--  DDL for Table TITLES
+--------------------------------------------------------
+
+  CREATE TABLE TITLES 
+   (	TITLES_NO DOUBLE, 
+	TITLES VARCHAR(50 ), 
+	FROM_DATE DATE, 
+	TO_DATE DATE
+   )  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0018202
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX SYS_C0018202 ON DEPARTMENTS (DEPT_NO)  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0018205
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX SYS_C0018205 ON DEPT_EMP (DEID) ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0018208
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX SYS_C0018208 ON DEPT_MANAGER (DMID) ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0018203
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX SYS_C0018203 ON EMPLOYEES (EMP_NO)  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0018211
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX SYS_C0018211 ON SALARIES (SALID) ;--------------------------------------------------------
+--  DDL for Index SYS_C0018201
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX SYS_C0018201 ON TITLES (TITLES_NO)  ;
+--------------------------------------------------------
+--  Constraints for Table DEPARTMENTS
+--------------------------------------------------------
+
+  ALTER TABLE DEPARTMENTS ADD PRIMARY KEY (DEPT_NO);
+--------------------------------------------------------
+--  Constraints for Table DEPT_EMP
+--------------------------------------------------------
+
+  ALTER TABLE DEPT_EMP ADD PRIMARY KEY (DEID);
+--------------------------------------------------------
+--  Constraints for Table DEPT_MANAGER
+--------------------------------------------------------
+
+  ALTER TABLE DEPT_MANAGER ADD PRIMARY KEY (DMID);
+--------------------------------------------------------
+--  Constraints for Table EMPLOYEES
+--------------------------------------------------------
+
+  ALTER TABLE EMPLOYEES ADD PRIMARY KEY (EMP_NO);
+--------------------------------------------------------
+--  Constraints for Table SALARIES
+--------------------------------------------------------
+
+  ALTER TABLE SALARIES ADD PRIMARY KEY (SALID);
+--------------------------------------------------------
+--  Constraints for Table TITLES
+--------------------------------------------------------
+
+  ALTER TABLE TITLES ADD PRIMARY KEY (TITLES_NO);
+--------------------------------------------------------
+--  Ref Constraints for Table DEPT_EMP
+--------------------------------------------------------
+
+  ALTER TABLE DEPT_EMP ADD FOREIGN KEY (EMPNO)
+	  REFERENCES EMPLOYEES (EMP_NO) ;
+  ALTER TABLE DEPT_EMP ADD FOREIGN KEY (DEPTNO)
+	  REFERENCES DEPARTMENTS (DEPT_NO) ;
+--------------------------------------------------------
+--  Ref Constraints for Table DEPT_MANAGER
+--------------------------------------------------------
+
+  ALTER TABLE DEPT_MANAGER ADD FOREIGN KEY (EMPNUMBER)
+	  REFERENCES EMPLOYEES (EMP_NO) ;
+  ALTER TABLE DEPT_MANAGER ADD FOREIGN KEY (DEPTNUMBER)
+	  REFERENCES DEPARTMENTS (DEPT_NO) ;
+--------------------------------------------------------
+--  Ref Constraints for Table EMPLOYEES
+--------------------------------------------------------
+
+  ALTER TABLE EMPLOYEES ADD FOREIGN KEY (TITLESNO)
+	  REFERENCES TITLES (TITLES_NO) ;
+--------------------------------------------------------
+--  Ref Constraints for Table SALARIES
+--------------------------------------------------------
+
+  ALTER TABLE SALARIES ADD FOREIGN KEY (EMPNO)
+	  REFERENCES EMPLOYEES (EMP_NO) ;
+
+CREATE SEQUENCE DEPARTMENTS_SEQUENCE  START WITH 1 Increment By 1 ;
+CREATE SEQUENCE EMPLOYEES_SEQUENCE START WITH 1 Increment By 1 ;
+CREATE SEQUENCE DEPT_EMP_SEQUENCE START WITH 1 Increment By 1 ;
+CREATE SEQUENCE DEPT_MANAGER_SEQUENCE  START WITH 1 Increment By 1 ;
+CREATE SEQUENCE SALARIES_SEQUENCE  START WITH 1 Increment By 1 ;
+CREATE SEQUENCE TITLES_SEQUENCE START WITH 1 Increment By 1 ;
